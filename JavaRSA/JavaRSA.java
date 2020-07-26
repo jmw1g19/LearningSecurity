@@ -1,5 +1,6 @@
 import java.math.BigInteger;
 import java.security.SecureRandom;
+import java.util.Scanner;
 
 public class JavaRSA{
     private final static SecureRandom random = new SecureRandom();
@@ -46,13 +47,23 @@ public class JavaRSA{
         // To test if everything works, we will instantiate this class and perform a test.
         JavaRSA instance = new JavaRSA();
         instance.generateKeyPair(128);
-        BigInteger message = new BigInteger(127, random);
+        
+        // To convert a string, we need to first accept an input.
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter message: ");
+        String plaintext = input.nextLine();
+
+        // Then, we must convert the string into a byte array, and use that to instantiate a BigInteger.
+        BigInteger message = new BigInteger(plaintext.getBytes());
+        String ciphertext = new String(instance.encrypt(message).toByteArray());
         BigInteger decryptedMessage = instance.decrypt(instance.encrypt(message));
 
         // For debugging purposes.
-        System.out.println("Original message: " + message);
-        System.out.println("Encrypted message: " + instance.encrypt(message));
-        System.out.println("Decrypted message: " + decryptedMessage);
+        System.out.println("Public key: " + instance.publicKey);
+        System.out.println("Private key: " + instance.privateKey);
+        System.out.println("N: " + instance.modulus);
+        System.out.println("===");
+        System.out.println("Encrypted message: " + ciphertext);
         
         // We perform an equality test - the decrypted message should be the same as the original!
         System.out.println("Do they match? " + message.equals(decryptedMessage));

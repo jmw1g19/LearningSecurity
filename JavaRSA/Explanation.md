@@ -11,3 +11,6 @@ Future versions will likely extend this implementation into a proper library and
 - Basic encryption and decryption functionality on another *BigInteger*.
 - Equality test to ensure implementation works as expected.
 - Improvements need to be made, including ensuring that phi is not a multiple of 65537, else GCD(phi, e) no longer equals 1.
+
+**Version 2.0** *26th July 2020*
+- Support for encrypting/decrypting a string.
