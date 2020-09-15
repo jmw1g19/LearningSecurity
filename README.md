@@ -15,6 +15,7 @@ The aim is to have at least one new project a month.
 Below is the full list of projects as part of this repo.
 
 1. **JavaRSA**, an implementation of RSA in Java [23th July 2020]
+2. **BlueBox**, a basic CTF developed as part of an online course [August 2020]
 
 ### Future Projects
 Below is a list of potential upcoming projects I may or may not develop and add to this repo.
