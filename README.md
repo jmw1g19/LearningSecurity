@@ -16,6 +16,7 @@ Below is the full list of projects as part of this repo.
 
 1. **JavaRSA**, an implementation of RSA in Java [23th July 2020]
 2. **BlueBox**, a basic CTF developed as part of an online course [August 2020]
+3. **OvershotTheBuffer**, a basic buffer overflow attack in C [26th October 2020]
 
 ### Future Projects
 Below is a list of potential upcoming projects I may or may not develop and add to this repo.
